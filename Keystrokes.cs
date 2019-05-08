@@ -1,10 +1,10 @@
-//Catching specific keystrokes
+//Catches keystrokes regardless of if the form is in focus or not
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace AppNameSpace{
 	
-	class ShortcutKey{
+	class Keystrokes{
 
 		[DllImport("user32.dll")]
 		public static extern short GetAsyncKeyState(Keys key);
@@ -26,7 +26,7 @@ namespace AppNameSpace{
 		
 		
 		
-//------------------Unbuffered Polling-----------------\\			
+//----------------------------------------------------------Unbuffered Polling			
 		
 		//Polls all keys and returns the first key it sees
 		public string allKeysPolled(){
@@ -663,7 +663,7 @@ namespace AppNameSpace{
 			
 			return "";
 		}
-//--------^^^^--------Unbuffered Polling--------^^^^--------\\	
+	
 
 
 
@@ -673,7 +673,7 @@ namespace AppNameSpace{
 
 
 
-//-------------------Buffered Polling-----------------------\\
+//----------------------------------------------------------Buffered Polling
 
 		/// <summary>
         /// Polls entire keyboard and returns all of the keys that were pressed
@@ -1345,7 +1345,7 @@ namespace AppNameSpace{
             return characters;
         }
 
-//-------^^^^-------Buffered Polling--------^^^^--------\\
+
 
 		
 	}
