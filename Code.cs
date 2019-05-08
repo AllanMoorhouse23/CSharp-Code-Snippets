@@ -5,6 +5,10 @@ string settingString = ConfigurationManager.AppSettings["NameOfSetting"];
 settingString = settingString.ToLower();
 int settingInt = Convert.ToInt32(ConfigurationManager.AppSettings["NameOfSetting"]);
 
+//Random Values
+Random random = new Random();
+
+
 
 //Screenshotting
 using System.Drawing;
@@ -25,6 +29,8 @@ private void screenshot() {
     pictureBox1.Image = bitmap;
 
 }
+
+
 
 
 
