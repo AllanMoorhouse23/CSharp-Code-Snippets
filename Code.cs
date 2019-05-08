@@ -1,3 +1,4 @@
+//-------------------------------------------------XML Settings
 //Import Settings from XML file
 using System.Configuration;
 
@@ -5,12 +6,25 @@ string settingString = ConfigurationManager.AppSettings["NameOfSetting"];
 settingString = settingString.ToLower();
 int settingInt = Convert.ToInt32(ConfigurationManager.AppSettings["NameOfSetting"]);
 
-//Random Values
+
+
+
+//-------------------------------------------------Random Values
 Random random = new Random();
 
+//Random int
+int randomInt = random.Next(0, 254);
+
+//Random letter
+string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+string randomLetter = alphabet[random(0, 26)];
+
+//Random month
+List<string> months = new List<string> {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+string randomMonth = months[random(0, 12)];         
 
 
-//Screenshotting
+//-------------------------------------------------Screenshotting
 using System.Drawing;
 
 private void screenshot() {
